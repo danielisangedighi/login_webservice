@@ -81,7 +81,7 @@ public class User {
         this.category = category;
     }
 
-
+/* 
     @Override
     public String toString() {
         return "{" +
@@ -94,5 +94,6 @@ public class User {
             ", category='" + getCategory() + "'" +
             "}";
     }
+*/
 
 }

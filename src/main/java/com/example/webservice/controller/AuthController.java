@@ -57,7 +57,7 @@ public class AuthController {
         User user = userRepository.findByEmail(email).orElse(null);
         if (user != null && bCryptPasswordEncoder.matches(password, user.getPassword())) {
             // Authentication successful
-            return "welcome";
+            return "redirect:/welcome";
         } else {
             // Authentication failed
             model.addAttribute("error", "Invalid email or password");

@@ -36,10 +36,10 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email).orElseThrow(() -> 
             new UsernameNotFoundException("User not found with email: " + email));
-        String encryptedPassword = bCryptPasswordEncoder.encode(user.getPassword());
+        //String encryptedPassword = bCryptPasswordEncoder.encode(user.getPassword());
         return org.springframework.security.core.userdetails.User
                 .withUsername(user.getEmail())
-                .password(encryptedPassword) // This should be the encrypted password from the database
+                .password(user.getPassword()) // This should be the encrypted password from the database
                 .roles(user.getCategory())
                 .build();
     }
