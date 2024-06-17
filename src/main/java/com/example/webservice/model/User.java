@@ -80,4 +80,19 @@ public class User {
     public void setCategory(String category) {
         this.category = category;
     }
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " id='" + getId() + "'" +
+            ", firstName='" + getFirstName() + "'" +
+            ", lastName='" + getLastName() + "'" +
+            ", email='" + getEmail() + "'" +
+            ", phoneNumber='" + getPhoneNumber() + "'" +
+            ", password='" + getPassword() + "'" +
+            ", category='" + getCategory() + "'" +
+            "}";
+    }
+
 }
