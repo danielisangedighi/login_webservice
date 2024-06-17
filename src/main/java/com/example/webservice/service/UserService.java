@@ -2,7 +2,7 @@ package com.example.webservice.service;
 
 import com.example.webservice.model.User;
 import com.example.webservice.repository.UserRepository;
-import com.example.webservice.util.PasswordEncoderUtil;
+import com.example.webservice.util.CustomPasswordEncoder;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,14 +19,14 @@ public class UserService implements UserDetailsService {
     private UserRepository userRepository;
 
     @Autowired
-    private PasswordEncoderUtil passwordEncoder;
+    private CustomPasswordEncoder customPasswordEncoder;
 
     public Optional<User> findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
     public void save(User user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(customPasswordEncoder.encode(user.getPassword()));
         user.setCategory("Basic User");
         userRepository.save(user);
     }
