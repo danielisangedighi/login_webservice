@@ -23,6 +23,9 @@ public class User {
     private String password;
     private String category;
 
+    //Constructor
+
+
     // Getters and Setters
 
     public Long getId() {
