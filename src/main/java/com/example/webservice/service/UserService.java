@@ -2,7 +2,6 @@ package com.example.webservice.service;
 
 import com.example.webservice.model.User;
 import com.example.webservice.repository.UserRepository;
-//import com.example.webservice.util.CustomPasswordEncoder;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
