@@ -43,4 +43,8 @@ public class UserService implements UserDetailsService {
                 .build();
     }
 
+    public Optional<User> findById(Long id) {
+        return userRepository.findById(id);
+    }
+
 }

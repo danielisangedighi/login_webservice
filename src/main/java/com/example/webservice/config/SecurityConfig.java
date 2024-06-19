@@ -20,44 +20,6 @@ public class SecurityConfig {
         this.userService = userService;
     }
 
-    /* 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-            .authorizeHttpRequests(authorize -> authorize
-                .requestMatchers("/register", "/home").permitAll()
-                .anyRequest().authenticated()
-            )
-            .formLogin(form -> form
-                .loginPage("/login")
-                .defaultSuccessUrl("/welcome", true)
-                .permitAll()
-            )
-            .logout(logout -> logout
-                .logoutSuccessUrl("/home")
-                .permitAll()
-            );
-        return http.build();
-    }
-
-    @Bean
-    public BCryptPasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    public UserDetailsService userDetailsService() {
-        return userService;
-    }
-
-    @Bean
-    public AuthenticationManagerBuilder authenticationManagerBuilder(HttpSecurity http) throws Exception {
-        AuthenticationManagerBuilder auth = http.getSharedObject(AuthenticationManagerBuilder.class);
-        auth.userDetailsService(userService).passwordEncoder(passwordEncoder());
-        return auth;
-    }
-    */
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http

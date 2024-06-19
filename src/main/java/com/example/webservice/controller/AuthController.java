@@ -4,12 +4,9 @@ import com.example.webservice.model.User;
 import com.example.webservice.repository.UserRepository;
 import com.example.webservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.core.userdetails.UserDetails;
-//import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-//import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.*;
 
 
