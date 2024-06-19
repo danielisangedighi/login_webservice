@@ -14,12 +14,12 @@
         <th>Category</th>
     </tr>
     <tr th:if="${user != null}">
-        <td th:text="${user.id}">1</td>
-        <td th:text="${user.firstName}">John</td>
-        <td th:text="${user.lastName}">Doe</td>
-        <td th:text="${user.email}">john.doe@example.com</td>
-        <td th:text="${user.phoneNumber}">123-456-7890</td>
-        <td th:text="${user.category}">Basic User</td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.firstName}"></td>
+        <td th:text="${user.lastName}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.phoneNumber}"></td>
+        <td th:text="${user.category}"></td>
     </tr>
     <tr th:unless="${user != null}">
         <td colspan="6">User not found.</td>
