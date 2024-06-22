@@ -24,6 +24,18 @@ public class UserService implements UserDetailsService {
         return userRepository.findByEmail(email);
     }
 
+    public Optional<User> findById(Long id) {
+        return userRepository.findById(id);
+    }
+
+    public Optional<User> findByFirstName(String firstName) {
+        return userRepository.findByFirstName(firstName);
+    }
+
+    public Optional<User> findByLastName(String lastName) {
+        return userRepository.findByFirstName(lastName);
+    }
+
     public void save(User user) {
         String encryptedPassword = bCryptPasswordEncoder.encode(user.getPassword());
         user.setPassword(encryptedPassword);
@@ -41,10 +53,6 @@ public class UserService implements UserDetailsService {
                 .password(user.getPassword()) // This should be the encrypted password from the database
                 .roles(user.getCategory())
                 .build();
-    }
-
-    public Optional<User> findById(Long id) {
-        return userRepository.findById(id);
     }
 
 }
