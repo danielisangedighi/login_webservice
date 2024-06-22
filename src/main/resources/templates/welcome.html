@@ -3,12 +3,16 @@
 <head>
     <title>Welcome</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <script src="/js/uriButton.js" type="text/javascript"></script>
 </head>
 <body>
     <h1>Welcome</h1>
     <nav>
-        <a href="/profile">Profile</a>
         <a href="/home">Logout</a>
     </nav>
+
+    <div>
+        <button type="submit" id="myButton">Click me to see my registration details</button>
+    </div>
 </body>
 </html>
