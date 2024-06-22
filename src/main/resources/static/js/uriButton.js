@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     button.addEventListener("click", function () {
         // Replace this with your dynamic ID (e.g., from user input or other sources)
-        const userId = 2; // Example ID
+        const userId = 1; // Example ID
 
         // Construct the URI
         const baseUri = window.location.origin; // Get the base URL
