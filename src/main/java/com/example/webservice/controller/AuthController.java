@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-
 @Controller
 public class AuthController {
 
@@ -54,8 +53,6 @@ public class AuthController {
         User user = userRepository.findByEmail(email).orElse(null);
         if (user != null && bCryptPasswordEncoder.matches(password, user.getPassword())) {
             // Authentication successful
-            model.addAttribute("firstName", user.getFirstName());
-            model.addAttribute("lastName", user.getLastName());
             return "redirect:/welcome";
         } else {
             // Authentication failed

@@ -1,9 +1,5 @@
 package com.example.webservice.model;
 
-//import javax.persistence.*;
-
-//import org.springframework.data.annotation.Id;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
@@ -83,20 +79,5 @@ public class User {
     public void setCategory(String category) {
         this.category = category;
     }
-
-/* 
-    @Override
-    public String toString() {
-        return "{" +
-            " id='" + getId() + "'" +
-            ", firstName='" + getFirstName() + "'" +
-            ", lastName='" + getLastName() + "'" +
-            ", email='" + getEmail() + "'" +
-            ", phoneNumber='" + getPhoneNumber() + "'" +
-            ", password='" + getPassword() + "'" +
-            ", category='" + getCategory() + "'" +
-            "}";
-    }
-*/
 
 }

@@ -5,15 +5,21 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
     <script src="/js/uriButton.js" type="text/javascript"></script>
 </head>
+
 <body>
-    <h1>Welcome <span th:text="${firstName}"></span> <span th:text="${lastName}"></span></h1>
+    
     <nav>
         <a href="/home">Logout</a>
     </nav>
 
+    <h2 th:text=" 'Welcome ' + ${firstName} + ' ' + ${lastName}"></span></h2>
+
     <div>
-        <button type="submit" id="myButton">Click me to see my registration details</button>
-        
+        <form>
+            <button type="submit" id="myButton">Click me to see my registration details</button>
+        </form>      
     </div>
+
 </body>
+
 </html>

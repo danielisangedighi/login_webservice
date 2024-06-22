@@ -17,13 +17,7 @@ public class PageController {
     @GetMapping("/profile/{id}")
     public String profile(@PathVariable Long id, Model model) {
         User user = userService.findById(id).orElse(null);
-        model.addAttribute("user", user);
-         
-        if (user != null) {
-            model.addAttribute("firstName", user.getFirstName());
-            model.addAttribute("lastName", user.getLastName());
-        }
-        
+        model.addAttribute("user", user);       
         return "userProfile";
     }    
 }
