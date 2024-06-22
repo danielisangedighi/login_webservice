@@ -40,9 +40,6 @@ public class AuthController {
     
         else userService.save(user);
 
-        //Code viewer for debugging
-        System.out.println(user);
-
         //Return to login page
         return "redirect:/login";
     }

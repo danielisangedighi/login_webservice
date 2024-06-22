@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Registration</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <script src="/js/uriUpdate.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Register</h1>
+    <nav>
+        <a href="/login">Login</a>
+        <a href="/home">Logout</a>
+    </nav>
+    <form th:action="@{/update}" th:object="${user}" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" th:field="*{firstName}" required>
+        <br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" th:field="*{lastName}" required>
+        <br>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" th:field="*{phoneNumber}" required>
+        <br>
+        <button type="submit">Register</button>
+        <div th:if="${error}" th:text="${error}"></div>
+    </form>
+</body>
+</html>

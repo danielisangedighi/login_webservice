@@ -26,7 +26,8 @@
             <td th:text="${user,lastName}"></td>
             <td th:text="${user.email}"></td>
             <td th:text="${user.phoneNumber}"></td>
-            <td> <a role="button" class="update" th:href="@{/(id = ${user.id})}">Update</a> </td>
+            <td th:text="${user.category}"></td>
+            <td> <a role="button" class="update" th:href="@{/register}">Update</a> </td>
           </tr>
         </table>
       </div>
