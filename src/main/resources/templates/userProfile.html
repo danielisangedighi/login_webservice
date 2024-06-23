@@ -28,7 +28,7 @@
                 <td th:text="${user.email}"></td>
                 <td th:text="${user.phoneNumber}"></td>
                 <td th:text="${user.category}"></td>
-                <td> <a role="button" id="myButton" class="update" th:href="@{/user/{id}}">Update</a> </td>
+                <td> <a role="button" id="myButton" class="update" th:href="@{/user/(id = ${id})}">Update</a> </td>
             </tr>
             <tr th:unless="${user != null}">
                 <td colspan="6">User not found.</td>
