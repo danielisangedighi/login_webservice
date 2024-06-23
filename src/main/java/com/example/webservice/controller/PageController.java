@@ -17,7 +17,7 @@ public class PageController {
     private UserService userService;
 
     @GetMapping("/profile/{id}")
-    public String profile(@PathVariable Long id, Model model) {
+    public String profile(@PathVariable("id") Long id, Model model) {
         User user = userService.findById(id).orElse(null);
         model.addAttribute("user", user);  
         //return a table with the user records for the id.     
